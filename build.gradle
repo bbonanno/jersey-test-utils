@@ -1,5 +1,5 @@
 group 'uk.co.bbonanno'
-version '1.0-SNAPSHOT'
+version '0.0.1-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -11,5 +11,10 @@ repositories {
 }
 
 dependencies {
+
+    compile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.23.2"
+    compile "org.projectlombok:lombok:1.16.10"
     compile 'junit:junit:4.11'
+
+    testCompile "org.assertj:assertj-core:3.5.2"
 }
