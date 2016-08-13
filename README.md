@@ -3,6 +3,9 @@
 
 Provides a set of test classes and helpers to facilitate the testing of applications using Jersey 2 server and/or client
 
+## If you want to contribute
+Just be aware that [Project Lombok](https://projectlombok.org/) is used in compile time, so you will need to intall the plug-in in your IDE (and enable Annotation Processing if you are using IntelliJ IDEA)
+
 ## How to use
 
 To test a resource your application exposes (Check JerseyServerRuleExampleTest for a full working example):
