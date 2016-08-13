@@ -22,9 +22,9 @@ public abstract class JerseyRule implements TestRule {
     private final List<Object> resources;
 
     @Setter
-    private BiConsumer<JerseyTest, List<Object>> beforeTest = (s, l) -> {};
+    private BiConsumer<JerseyTest, List<Object>> executeBeforeTest = (s, l) -> {};
     @Setter
-    private BiConsumer<JerseyTest, List<Object>> afterTest  = (s, l) -> {};
+    private BiConsumer<JerseyTest, List<Object>> executeAfterTest = (s, l) -> {};
 
     public JerseyRule(Object... resources) {
         this.resources = asList(resources);
@@ -56,11 +56,11 @@ public abstract class JerseyRule implements TestRule {
     }
 
     protected void beforeTest(JerseyTest server) {
-        beforeTest.accept(server, resources);
+        executeBeforeTest.accept(server, resources);
     }
 
     protected void afterTest(JerseyTest server) {
-        afterTest.accept(server, resources);
+        executeAfterTest.accept(server, resources);
     }
 
     protected JerseyTest newTestServer() {
