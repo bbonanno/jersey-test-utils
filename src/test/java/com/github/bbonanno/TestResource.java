@@ -1,4 +1,4 @@
-package uk.co.bbonanno;
+package com.github.bbonanno;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.InternalServerErrorException;

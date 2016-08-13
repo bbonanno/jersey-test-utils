@@ -1,15 +1,13 @@
-package uk.co.bbonanno;
+package com.github.bbonanno;
 
 import org.junit.Rule;
 import org.junit.Test;
-import uk.co.bbonanno.TestService.BusinessException;
 
 import javax.ws.rs.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
-import static uk.co.bbonanno.ExceptionTesting.expect;
 
 public class JerseyClientRuleExampleTest {
 
@@ -45,7 +43,7 @@ public class JerseyClientRuleExampleTest {
         when(mockDependency.someResource(anyString(), anyString())).thenThrow(new InternalServerErrorException());
 
         //when
-        BusinessException exception = expect(BusinessException.class, () -> testObj.loadSomeData(param1, param2));
+        TestService.BusinessException exception = ExceptionTesting.expect(TestService.BusinessException.class, () -> testObj.loadSomeData(param1, param2));
 
         //then
         assertThat(exception).hasMessage("Boom: 500");

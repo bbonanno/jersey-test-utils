@@ -1,4 +1,4 @@
-package uk.co.bbonanno;
+package com.github.bbonanno;
 
 import org.junit.Test;
 import org.reflections.Reflections;
@@ -57,8 +57,7 @@ public abstract class ResourcesTest {
             .isEmpty();
     }
 
-
-    private static Set<Class<? extends Annotation>> annotationClasses(Method method) {
+    public static Set<Class<? extends Annotation>> annotationClasses(Method method) {
         return asList(method.getAnnotations()).stream()
             .map(Annotation::annotationType)
             .collect(toSet());

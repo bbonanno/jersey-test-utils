@@ -1,4 +1,4 @@
-package uk.co.bbonanno;
+package com.github.bbonanno;
 
 import lombok.Getter;
 import lombok.experimental.Accessors;

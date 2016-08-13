@@ -1,4 +1,4 @@
-package uk.co.bbonanno;
+package com.github.bbonanno;
 
 import org.junit.Rule;
 import org.junit.Test;
