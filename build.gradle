@@ -1,4 +1,4 @@
-group 'uk.co.bbonanno'
+group 'com.github.bbonanno'
 version '0.0.1-SNAPSHOT'
 
 apply plugin: 'java'
