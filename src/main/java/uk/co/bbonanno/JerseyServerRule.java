@@ -36,7 +36,7 @@ public class JerseyServerRule implements TestRule {
                     server.setUp();
 
                     client = server.client();
-                    target = client.target("/");
+                    target = server.target("/");
 
                     base.evaluate();
                 } finally {
