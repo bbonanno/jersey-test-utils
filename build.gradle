@@ -15,6 +15,7 @@ dependencies {
     compile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.23.2"
     compile "org.projectlombok:lombok:1.16.10"
     compile 'junit:junit:4.11'
+    compile "org.assertj:assertj-core:3.5.2"
 
-    testCompile "org.assertj:assertj-core:3.5.2"
+    testCompile "org.mockito:mockito-all:1.10.19"
 }

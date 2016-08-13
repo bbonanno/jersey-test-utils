@@ -17,7 +17,7 @@ public class JerseyServerRuleTest {
     @Test
     public void greet_shouldReturnTheExpectedValue() throws Exception {
         //when
-        String result = jerseyServerRule.getTarget()
+        String result = jerseyServerRule.webTarget()
             .path("/myapp/greet")
             .request()
             .get(String.class);
@@ -29,7 +29,7 @@ public class JerseyServerRuleTest {
     @Test
     public void fail_shouldReturnA500Error() throws Exception {
         //when
-        Response result = jerseyServerRule.getTarget()
+        Response result = jerseyServerRule.webTarget()
             .path("/myapp/fail500")
             .request()
             .get();
