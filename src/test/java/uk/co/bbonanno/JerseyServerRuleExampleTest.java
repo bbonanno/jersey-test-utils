@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JerseyServerRuleTest {
+public class JerseyServerRuleExampleTest {
 
     private final TestResource resource = new TestResource();
 

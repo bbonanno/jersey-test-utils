@@ -11,7 +11,7 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 import static uk.co.bbonanno.ExceptionTesting.expect;
 
-public class JerseyClientRuleTest {
+public class JerseyClientRuleExampleTest {
 
     private final MockDependency mockDependency = mock(MockDependency.class);
 
