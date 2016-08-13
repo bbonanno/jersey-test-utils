@@ -57,6 +57,12 @@ public abstract class ResourcesTest {
             .isEmpty();
     }
 
+    protected Set<Method> findAllHttpMethods() {
+        return HTTP_METHOD_ANNOTATIONS.stream()
+            .flatMap(httpAnnotation -> reflections.getMethodsAnnotatedWith(httpAnnotation).stream())
+            .collect(toSet());
+    }
+
     public static Set<Class<? extends Annotation>> annotationClasses(Method method) {
         return asList(method.getAnnotations()).stream()
             .map(Annotation::annotationType)
